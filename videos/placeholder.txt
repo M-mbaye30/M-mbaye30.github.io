@@ -1,0 +1,22 @@
+# Dossier Vidéos
+
+Ce dossier est destiné à contenir les vidéos de démonstration de vos projets.
+
+## Vidéos à ajouter :
+
+1. **ner-demo.mp4** - Démonstration de l'application NER Streamlit
+2. **rag-demo.mp4** - Démonstration du système RAG pour documents budgétaires
+3. **datalake-demo.mp4** - Démonstration de DataLake Explorer
+4. **veille-demo.mp4** - Démonstration de l'agent de veille technologique NLP
+
+## Recommandations :
+
+- **Format** : MP4 (H.264)
+- **Résolution** : 1920x1080 ou 1280x720
+- **Durée** : 30 secondes à 2 minutes
+- **Taille** : Maximum 50 MB par vidéo pour un chargement optimal
+
+## Note :
+
+En attendant vos vidéos, les boutons de lecture afficheront un message "Vidéo de démonstration bientôt disponible !"
+
