@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
 // Animation des compteurs (si vous voulez ajouter des statistiques)
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
