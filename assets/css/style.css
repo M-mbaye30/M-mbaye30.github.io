@@ -146,12 +146,12 @@ body {
 }
 
 .hero-content {
-    /* Utilise flexbox pour un meilleur contrôle de l'agencement */
+    /* Mise en page corrigée pour l'agencement de l'image et du texte */
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 4rem;
-    padding: 8rem 0; /* Ajoute un padding pour un meilleur espacement */
+    padding: 8rem 0;
 }
 
 .hero-image {
@@ -477,7 +477,7 @@ section {
 }
 
 .skill-tag {
-    /* Nouveau style pour une meilleure lisibilité */
+    /* Style corrigé pour la lisibilité */
     background: #e0f7ff;
     color: #004d66;
     padding: 0.5rem 1rem;
