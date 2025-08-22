@@ -146,16 +146,19 @@ body {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    /* Utilise flexbox pour un meilleur contrôle de l'agencement */
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 4rem;
+    padding: 8rem 0; /* Ajoute un padding pour un meilleur espacement */
 }
 
 .hero-image {
     position: relative;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .profile-img {
@@ -192,6 +195,7 @@ body {
 
 .hero-text {
     color: white;
+    flex-grow: 1;
 }
 
 .greeting {
@@ -225,7 +229,7 @@ body {
     line-height: 1.7;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .hero-status {
@@ -329,6 +333,8 @@ body {
 /* Sections communes */
 section {
     padding: 5rem 0;
+    /* Ajoute une marge supérieure pour éviter le chevauchement avec la section précédente */
+    margin-top: 50px;
 }
 
 .section-header {
@@ -471,8 +477,9 @@ section {
 }
 
 .skill-tag {
-    background: var(--gradient-primary);
-    color: white;
+    /* Nouveau style pour une meilleure lisibilité */
+    background: #e0f7ff;
+    color: #004d66;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -817,7 +824,7 @@ section {
     }
     
     .hero-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
@@ -874,4 +881,3 @@ section {
         font-size: 0.9rem;
     }
 }
-
