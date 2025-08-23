@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouhamed Mbaye - Ingénieur NLP & IA</title>
-    <meta name="description" content="Portfolio de Mouhamed Mbaye, Ingénieur d'Études en Traitement Automatique des Langues et Intelligence Artificielle">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>MOUHAMED MBAYE - NLP Engineer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-spinner"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container container">
-            <a href="#hero" class="nav-logo">
-                <span>Mouhamed</span>
-                <span class="nav-logo-dot">.</span>
-            </a>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>TAListe</span>
+            </div>
             <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#expertise" class="nav-link">Expertise</a></li>
                 <li><a href="#projects" class="nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -37,601 +30,363 @@
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-background">
-                <div class="hero-particles"></div>
-                <div class="hero-shapes">
-                    <div class="floating-shape shape-1"></div>
-                    <div class="floating-shape shape-2"></div>
-                    <div class="floating-shape shape-3"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="images/photo_profil.jpg" alt="Mouhamed Mbaye" class="profile-img">
+                    <div class="image-overlay"></div>
                 </div>
-            </div>
-            
-            <div class="hero-container container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="hero-badge">
-                            <span class="badge-text">👋 Bienvenue sur mon portfolio</span>
-                        </div>
-                        <h1 class="hero-title">
-                            <span class="greeting">Je suis</span>
-                            <span class="name">Mouhamed Mbaye</span>
-                            <span class="animated-text">
-                                <span class="role">Ingénieur NLP</span>
-                                <span class="role">Spécialiste IA</span>
-                                <span class="role">Data Scientist</span>
-                            </span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            Passionné par le <strong>traitement automatique des langues</strong> et l'<strong>intelligence artificielle</strong>, 
-                            je transforme les données textuelles en solutions intelligentes et innovantes.
-                        </p>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Projets NLP</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">Années d'expérience</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">Technologies maîtrisées</span>
-                            </div>
-                        </div>
-
-                        <div class="hero-status">
-                            <div class="status-indicator">
-                                <span class="status-dot"></span>
-                                <span class="status-text">Disponible à partir de septembre 2025</span>
-                            </div>
-                        </div>
-                        
-                        <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary">
-                                <span class="btn-text">Découvrir mes projets</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a href="CV_Mouhamed_Mbaye.pdf" download class="btn btn-secondary">
-                                <i class="fas fa-download"></i>
-                                <span class="btn-text">Télécharger CV</span>
-                            </a>
-                        </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Bonjour, je suis</span>
+                        <span class="name">Mouhamed Mbaye</span>
+                    </h1>
+                    <p class="hero-subtitle">NLP Engineer</p>
+                    <p class="hero-description">
+                        Spécialisé en Traitement Automatique des Langues, ma passion est de transformer des informations textuelles complexes en connaissances structurées et exploitables. Je conçois et développe des pipelines NLP/TAL robustes, en intégrant les LLMs et des architectures comme RAG. Mon approche combine la rigueur de l'expérimentation avec la construction de solutions interactives. Récemment diplômé et disponible immédiatement, je cherche à contribuer à des projets de recherche ambitieux et à traduire l'innovation scientifique en technologies concrètes.
+                    </p>
+                    <div class="hero-status">
+                        <span class="status-indicator"></span>
+                        <span>Disponible immédiatement</span>
                     </div>
-                    
-                    <div class="hero-image">
-                        <div class="profile-container">
-                            <div class="profile-glow"></div>
-                            <img src="images/photo-profil.jpg" alt="Photo de profil de Mouhamed Mbaye" class="profile-img">
-                            <div class="profile-border"></div>
-                        </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                        <a href="images/CV_MOUHAMED_MBAYE_2025.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            Télécharger CV
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">À propos</span>
-                    <h2 class="section-title">Mon parcours & expertise</h2>
-                    <p class="section-subtitle">Découvrez mon histoire et mes compétences techniques</p>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-story">
-                        <div class="story-card">
-                            <div class="story-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3>Mon parcours académique</h3>
-                            <p>
-                                Après un baccalauréat en série L'AR avec la mention Très Bien, j'ai obtenu une 
-                                <strong>bourse d'excellence</strong> pour poursuivre une licence en informatique linguistique 
-                                à l'Université Cadi Ayyad de Marrakech. J'ai ensuite intégré un master en Data Science 
-                                spécialisé en NLP à l'Université Mohammed V de Rabat, avant de poursuivre un autre master 
-                                en <strong>Traitement Automatique des Langues (TAL)</strong> à l'Université Marie et Louis 
-                                Pasteur de Besançon, en France.
-                            </p>
-                        </div>
-                        
-                        <div class="story-card">
-                            <div class="story-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h3>Ma passion</h3>
-                            <p>
-                                Je suis passionné par la <strong>démocratisation de l'IA</strong> et la création 
-                                d'outils qui rendent l'information plus accessible. Mon objectif est de développer 
-                                des solutions NLP qui peuvent réellement impacter positivement la société et 
-                                faciliter l'interaction entre les humains et la technologie.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="skills-section">
-                        <h3 class="skills-title">Mes compétences techniques</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-code"></i>
-                                    <h4>Langages</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Python</span>
-                                    <span class="skill-tag">SQL</span>
-                                    <span class="skill-tag">R</span>
-                                    <span class="skill-tag">PHP</span>
-                                    <span class="skill-tag">C++</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-brain"></i>
-                                    <h4>IA & Machine Learning</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">PyTorch</span>
-                                    <span class="skill-tag">TensorFlow</span>
-                                    <span class="skill-tag">Scikit-learn</span>
-                                    <span class="skill-tag">Hugging Face</span>
-                                    <span class="skill-tag">spaCy</span>
-                                    <span class="skill-tag">NLTK</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-tools"></i>
-                                    <h4>Outils & Data</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Pandas</span>
-                                    <span class="skill-tag">NumPy</span>
-                                    <span class="skill-tag">Matplotlib</span>
-                                    <span class="skill-tag">Seaborn</span>
-                                    <span class="skill-tag">Jupyter</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-cloud"></i>
-                                    <h4>Déploiement</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Docker</span>
-                                    <span class="skill-tag">Streamlit</span>
-                                    <span class="skill-tag">GitHub</span>
-                                    <span class="skill-tag">GitLab</span>
-                                    <span class="skill-tag">Google Cloud</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-database"></i>
-                                    <h4>Bases de données</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">MongoDB</span>
-                                    <span class="skill-tag">PostgreSQL</span>
-                                    <span class="skill-tag">MySQL</span>
-                                    <span class="skill-tag">ChromaDB</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="category-header">
-                                    <i class="fas fa-globe"></i>
-                                    <h4>Technologies Web</h4>
-                                </div>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">HTML5</span>
-                                    <span class="skill-tag">CSS3</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                    <span class="skill-tag">LangChain</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Expérience</span>
-                    <h2 class="section-title">Mon parcours professionnel</h2>
-                    <p class="section-subtitle">Les étapes clés de mon développement en NLP et IA</p>
-                </div>
-                
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="timeline-icon">
-                                <i class="fas fa-microscope"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-badge current">Actuel</div>
-                                <h3>Spécialiste NLP</h3>
-                                <p class="timeline-company">IMGT (IGH, CNRS) • Montpellier</p>
-                                <p class="timeline-date">
-                                    <i class="fas fa-calendar"></i>
-                                    Janvier - Juillet 2025
-                                </p>
-                            </div>
-                            <div class="timeline-description">
-                                <p>Développement de solutions avancées d'extraction d'informations pour l'Organisation Mondiale de la Santé.</p>
-                                <ul class="achievement-list">
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Conception et évaluation d'une solution NLP pour l'extraction automatique d'entités dans des textes scientifiques (OMS)
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Analyse comparative et fine-tuning de modèles de Deep Learning (BILSTM-CRF, BERT, GLINER, scispaCy)
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Création et déploiement d'une interface utilisateur interactive via Streamlit Community Cloud
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <div class="timeline-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Data Scientist - NLP</h3>
-                                <p class="timeline-company">Université Mohammed V • Rabat</p>
-                                <p class="timeline-date">
-                                    <i class="fas fa-calendar"></i>
-                                    Janvier - Juin 2024
-                                </p>
-                            </div>
-                            <div class="timeline-description">
-                                <p>Recherche et développement en classification automatique multilingue de documents.</p>
-                                <ul class="achievement-list">
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Modélisation et classification automatique multilingue de documents
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Prétraitements avancés : annotation, extraction de connaissances et structuration de données
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        Implémentation et évaluation comparative de modèles LSTM et BERT
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Portfolio</span>
-                    <h2 class="section-title">Mes réalisations</h2>
-                    <p class="section-subtitle">Une sélection de projets qui démontrent mes compétences en NLP et IA</p>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card featured">
-                        <div class="project-image">
-                            <img src="images/project-ner.jpg" alt="Projet NER - Extraction d'entités nommées">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <button class="btn-action" onclick="openVideoModal('video1')" title="Voir la démo">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <a href="https://github.com/M-mbaye30/NER" target="_blank" class="btn-action" title="Voir le code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="btn-action" title="Demo live">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <span class="project-badge">Featured</span>
-                                <h3>Extraction d'entités nommées</h3>
-                            </div>
-                            <p>Application complète permettant d'identifier et d'extraire automatiquement des entités nommées dans des textes avec une interface intuitive et des modèles de pointe.</p>
-                            <div class="project-features">
-                                <span class="feature-tag">Multi-modèles</span>
-                                <span class="feature-tag">Interface interactive</span>
-                                <span class="feature-tag">Performance optimisée</span>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Streamlit</span>
-                                <span>spaCy</span>
-                                <span>PyTorch</span>
-                                <span>Hugging Face</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/project-rag.jpg" alt="Projet RAG - Question-Answering">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <button class="btn-action" onclick="openVideoModal('video2')" title="Voir la démo">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <a href="https://github.com/M-mbaye30/RAG" target="_blank" class="btn-action" title="Voir le code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Question-Answering RAG</h3>
-                            </div>
-                            <p>Solution RAG (Retrieval-Augmented Generation) pour interroger intelligemment le contenu de documents PDF officiels via une interface web moderne.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>LangChain</span>
-                                <span>Llama 3.2</span>
-                                <span>ChromaDB</span>
-                                <span>Streamlit</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/project-data.jpg" alt="Projet DataLake Explorer">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <button class="btn-action" onclick="openVideoModal('video3')" title="Voir la démo">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <a href="https://github.com/M-mbaye30/DataLake" target="_blank" class="btn-action" title="Voir le code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>DataLake Explorer</h3>
-                            </div>
-                            <p>Solution complète de gestion et d'exploration de données, combinant un système de traitement performant avec une interface utilisateur intuitive.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Streamlit</span>
-                                <span>BeautifulSoup</span>
-                                <span>Seaborn</span>
-                                <span>Pandas</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/project-veille.jpg" alt="Projet Agent de veille technologique">
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <button class="btn-action" onclick="openVideoModal('video4')" title="Voir la démo">
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                    <a href="https://github.com/M-mbaye30/Veille-Technologique-NLP" target="_blank" class="btn-action" title="Voir le code">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Agent de veille technologique</h3>
-                            </div>
-                            <p>Système automatisé qui surveille, analyse et synthétise les dernières avancées en NLP pour rester à la pointe de l'innovation.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>OpenAI API</span>
-                                <span>Web Scraping</span>
-                                <span>Streamlit</span>
-                                <span>Automation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Contact</span>
-                    <h2 class="section-title">Travaillons ensemble</h2>
-                    <p class="section-subtitle">Vous avez un projet en NLP ou IA ? Discutons de vos besoins !</p>
-                </div>
-                
-                <div class="contact-content">
-                    <div class="contact-form-section">
-                        <div class="contact-form-header">
-                            <h3>Envoyez-moi un message</h3>
-                            <p>Décrivez votre projet et vos besoins, je vous répondrai dans les plus brefs délais.</p>
-                        </div>
-                        
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">
-                                        <i class="fas fa-user"></i>
-                                        Nom complet
-                                    </label>
-                                    <input type="text" id="name" name="name" required placeholder="Votre nom">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">
-                                        <i class="fas fa-envelope"></i>
-                                        Adresse email
-                                    </label>
-                                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">
-                                    <i class="fas fa-tag"></i>
-                                    Sujet
-                                </label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Sélectionnez un sujet</option>
-                                    <option value="projet-nlp">Projet NLP</option>
-                                    <option value="collaboration">Collaboration</option>
-                                    <option value="consultation">Consultation</option>
-                                    <option value="autre">Autre</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">
-                                    <i class="fas fa-comment"></i>
-                                    Message
-                                </label>
-                                <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou vos besoins..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <span class="btn-text">Envoyer le message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info-section">
-                        <div class="contact-cards">
-                            <div class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Localisation</h4>
-                                    <p>Montpellier, France</p>
-                                    <small>Disponible pour missions à distance</small>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email professionnel</h4>
-                                    <a href="mailto:mouhamedmbaye371@gmail.com">mouhamedmbaye371@gmail.com</a>
-                                    <small>Réponse sous 24h</small>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Téléphone</h4>
-                                    <a href="tel:+33764284388">+33 7 64 28 43 88</a>
-                                    <small>Lun-Ven, 9h-18h</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-section">
-                            <h4>Retrouvez-moi sur</h4>
-                            <div class="social-links">
-                                <a href="https://www.linkedin.com/in/mouhamed-mbaye-nlp-tal/" target="_blank" class="social-link linkedin">
-                                    <i class="fab fa-linkedin-in"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="https://github.com/M-mbaye30" target="_blank" class="social-link github">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="availability-card">
-                            <div class="availability-header">
-                                <i class="fas fa-calendar-check"></i>
-                                <h4>Disponibilité</h4>
-                            </div>
-                            <div class="availability-status">
-                                <span class="status-dot available"></span>
-                                <span>Disponible à partir de septembre 2025</span>
-                            </div>
-                            <p>Ouvert aux opportunités de CDI, missions freelance et collaborations sur des projets innovants en NLP et IA.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h4>Mouhamed Mbaye</h4>
-                    <p>Ingénieur NLP & Spécialiste IA</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">À propos</a>
-                    <a href="#experience">Expérience</a>
-                    <a href="#projects">Projets</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mouhamed Mbaye❤️. Tous droits réservés.</p>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <p class="section-subtitle">Découvrez mon parcours et mes compétences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>Mon parcours</h3>
+                        <p>
+                            Après un baccalauréat en série L’AR avec la mention Très Bien, j’ai obtenu une bourse d’excellence pour poursuivre une licence en informatique linguistique à l’Université Cadi Ayyad de Marrakech. J’ai ensuite intégré un master en Data Science spécialisé en NLP à l’Université Mohammed V de Rabat, avant de poursuivre un autre master en Traitement Automatique des Langues (TAL) à l’Université Marie et Louis Pasteur de Besançon, en France.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">🧬</div>
+                            <div class="timeline-content">
+                                <h4>IMGT (IGH, CNRS), Montpellier</h4>
+                                <span class="timeline-date">Jan-Jul 2025</span>
+                                <p>Spécialiste NLP</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">📊</div>
+                            <div class="timeline-content">
+                                <h4>Université Mohammed V, Rabat</h4>
+                                <span class="timeline-date">Jan-Juin 2024</span>
+                                <p>Data Scientist NLP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-skills">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Langages & BDD</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">ChromaDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>NLP & IA</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">spaCy</span>
+                                <span class="skill-tag">Hugging Face</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">LLMs</span>
+                                <span class="skill-tag">RAG</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Outils & Frameworks</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Streamlit</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">LangChain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon expertise</h2>
+                <p class="section-subtitle">Domaines de spécialisation et compétences techniques</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-icon">🤖</div>
+                    <h3>NLP & Traitement Automatique des Langues</h3>
+                    <p>Développement de solutions NLP pour l'extraction automatique d'entités dans des textes scientifiques. Implémentation et fine-tuning de modèles Deep Learning : BiLSTM-CRF, BERT, GLiNER, scispaCy.</p>
+                    <div class="card-tech">
+                        <span>spaCy</span>
+                        <span>BERT</span>
+                        <span>PyTorch</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>IA Générative & LLMs</h3>
+                    <p>Intégration et déploiement de Large Language Models. Développement de systèmes RAG avec bases de données vectorielles. Stratégies de prompt engineering et inférence locale.</p>
+                    <div class="card-tech">
+                        <span>Llama 3</span>
+                        <span>RAG</span>
+                        <span>Ollama</span>
+                    </div>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Développement & Déploiement</h3>
+                    <p>Création d'interfaces utilisateur interactives avec Streamlit. Déploiement d'applications via Streamlit Community Cloud. Annotation de données et preprocessing de données textuelles complexes.</p>
+                    <div class="card-tech">
+                        <span>Streamlit</span>
+                        <span>Flask</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes projets</h2>
+                <p class="section-subtitle">Découvrez mes réalisations récentes</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/portfolio1.JPG" alt="Application NER Streamlit">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="btn-action" onclick="openVideoModal('video1')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Application NER Streamlit</h3>
+                        <p>Application permettant d'identifier et d'extraire automatiquement des entités nommées avec interface interactive.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>spaCy</span>
+                            <span>PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/portfolio2.JPG" alt="Système RAG">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="btn-action" onclick="openVideoModal('video2')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système RAG pour Documents Budgétaires</h3>
+                        <p>Système RAG spécialisé dans l'analyse de documents budgétaires sénégalais, utilisant Llama 3.2 et ChromaDB.</p>
+                        <div class="project-tech">
+                            <span>LangChain</span>
+                            <span>Llama 3.2</span>
+                            <span>ChromaDB</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/portfolio3.JPG" alt="DataLake Explorer">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="btn-action" onclick="openVideoModal('video3')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>DataLake Explorer</h3>
+                        <p>Solution complète de gestion et d'exploration de données avec interface Streamlit intuitive et moteur de recherche.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>seaborn</span>
+                            <span>BeautifulSoup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/portfolio4.JPG" alt="Agent de Veille">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="btn-action" onclick="openVideoModal('video4')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="#" class="btn-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Agent de Veille Technologique NLP</h3>
+                        <p>Système automatisé de surveillance et d'analyse des dernières avancées en NLP avec génération de rapports.</p>
+                        <div class="project-tech">
+                            <span>OpenAI API</span>
+                            <span>Web Scraping</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-moi</h2>
+                <p class="section-subtitle">N'hésitez pas à me contacter pour discuter de vos besoins en NLP et IA</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:mouhamedmbaye371@gmail.com">mouhamedmbaye371@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33764284388">+33 7 64 28 43 88</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localisation</h4>
+                            <span>Montpellier, France</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/mouhamed-mbaye-nlp-tal" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/M-mbaye30" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:mouhamedmbaye371@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Video Modal -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <button class="modal-close" aria-label="Fermer la modal">
-                <i class="fas fa-times"></i>
-            </button>
+            <span class="close">&times;</span>
             <div class="video-container">
-                <video id="modalVideo" controls playsinline>
-                    <p>Votre navigateur ne supporte pas la lecture de vidéos.</p>
+                <video id="modalVideo" controls>
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mouhamed Mbaye. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+

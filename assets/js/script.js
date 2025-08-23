@@ -125,6 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Effet de parallaxe léger pour la hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
 
 // Animation des compteurs (si vous voulez ajouter des statistiques)
 function animateCounter(element, target, duration = 2000) {
@@ -263,3 +271,4 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
