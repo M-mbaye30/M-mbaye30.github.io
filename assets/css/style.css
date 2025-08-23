@@ -124,7 +124,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
-    padding-top: 0; /* Supprimer l'espace au-dessus du texte */
+    padding-top: 0;
 }
 
 .hero::before {
@@ -150,7 +150,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem; /* Réduire l'espace entre l'image et le texte */
+    gap: 4rem;
     padding: 8rem 0;
 }
 
@@ -297,15 +297,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* Suppression de la flèche de défilement */
-.scroll-indicator {
-    display: none;
-}
-
 /* Sections communes */
 section {
     padding: 5rem 0;
-    margin-top: 0; /* Assure qu'il n'y a pas de marge supérieure indésirable */
+    margin-top: 0;
 }
 
 .section-header {
@@ -362,18 +357,24 @@ section {
     color: var(--primary-color);
 }
 
+/* Expériences */
 .experience-timeline {
     position: relative;
-    padding-left: 20px; /* Ajout d'un padding pour le contenu */
+    padding-left: 30px;
+    background-color: var(--bg-primary);
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+    margin-bottom: 3rem;
 }
 
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 0; /* Positionner la ligne à gauche du padding */
+    left: 0;
     top: 0;
-    height: 100%; /* Laisser la ligne s'étendre sur toute la hauteur */
-    width: 1px; /* Rendre la ligne plus fine */
+    height: 100%;
+    width: 2px;
     background: var(--gradient-primary);
 }
 
@@ -388,7 +389,7 @@ section {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -5px; /* Ajuster la position du cercle sur la ligne */
+    left: -5px;
     top: 0;
     width: 10px;
     height: 10px;
@@ -408,15 +409,15 @@ section {
     font-size: 1.2rem;
     box-shadow: var(--shadow-md);
     z-index: 2;
-    position: relative; /* Pour que le z-index fonctionne */
-    left: -30px; /* Décaler l'icône pour qu'elle soit sur la ligne */
+    position: relative;
+    left: -30px;
 }
 
 .timeline-content {
     background: white;
     padding: 1.5rem;
     border-radius: 15px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     flex: 1;
 }
 
@@ -440,7 +441,7 @@ section {
 }
 
 .timeline-content ul li::before {
-    content: '•'; /* Utiliser une puce */
+    content: '•';
     color: var(--primary-color);
     position: absolute;
     left: 0;
@@ -453,63 +454,17 @@ section {
     font-size: 0.9rem;
 }
 
-.skills-grid {
-    display: grid;
-    gap: 2rem;
-}
-
-.skill-category {
-    background: white;
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-}
-
-.skill-category h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.skill-tags {
+/* Mon expertise */
+.expertise-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
-}
-
-.skill-tag {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
-    color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
-    font-size: 0.9rem;
-    font-weight: 500;
-    white-space: nowrap;
-    display: inline-flex; /* Pour centrer le texte */
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.skill-tag:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
-    transform: translateY(-2px);
-}
-
-/* Expertise Section */
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 .expertise-card {
+    flex: 1 1 300px;
+    max-width: 350px;
     background: white;
     padding: 2.5rem;
     border-radius: 20px;
@@ -545,14 +500,14 @@ section {
 .card-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
+    gap: 0.75rem;
 }
 
 .card-tech span {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
+    background: var(--primary-color);
     color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
@@ -563,7 +518,7 @@ section {
 }
 
 .card-tech span:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -672,14 +627,14 @@ section {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
+    gap: 0.75rem;
 }
 
 .project-tech span {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
+    background: var(--primary-color);
     color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
@@ -690,7 +645,7 @@ section {
 }
 
 .project-tech span:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -778,56 +733,6 @@ section {
     text-align: center;
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    position: relative;
-    margin: 5% auto;
-    width: 80%;
-    max-width: 800px;
-}
-
-.close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001;
-}
-
-.close:hover {
-    opacity: 0.7;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
 /* Footer */
 .footer {
     background: var(--bg-dark);
@@ -860,7 +765,7 @@ section {
     }
     
     .hero-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
@@ -870,14 +775,11 @@ section {
     }
     
     .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
+    .contact-content,
     .expertise-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .hero-buttons {
@@ -917,4 +819,3 @@ section {
         font-size: 0.9rem;
     }
 }
-
