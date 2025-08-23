@@ -124,7 +124,6 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
-    /* Ajustement de la marge supérieure */
     padding-top: 5rem;
 }
 
@@ -148,11 +147,9 @@ body {
 }
 
 .hero-content {
-    /* Mise en page corrigée pour l'agencement de l'image et du texte */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Augmentation de l'espace entre l'image et le texte */
     gap: 6rem;
     padding: 8rem 0;
 }
@@ -317,7 +314,6 @@ body {
 /* Sections communes */
 section {
     padding: 5rem 0;
-    /* Ajustement de la marge supérieure pour éviter le chevauchement */
     margin-top: 0;
 }
 
@@ -377,6 +373,8 @@ section {
 
 .experience-timeline {
     position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .experience-timeline::before {
@@ -384,11 +382,9 @@ section {
     position: absolute;
     left: 20px;
     top: 0;
-    /* Raccourcissement de la ligne */
     height: 100%;
-    /* Rendu plus subtil */
-    background: rgba(0, 0, 0, 0.1);
     width: 2px;
+    background: var(--border-color);
 }
 
 .timeline-item {
@@ -463,7 +459,6 @@ section {
 }
 
 .skill-tag {
-    /* Style corrigé pour la lisibilité et animation */
     background: #e0f7ff;
     color: #004d66;
     padding: 0.5rem 1rem;
@@ -823,6 +818,7 @@ section {
     .hamburger {
         display: flex;
     }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -835,32 +831,40 @@ section {
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
     }
+    
     .nav-menu.active {
         left: 0;
     }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
+    
     .name {
         font-size: 2.5rem;
     }
+    
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    
     .expertise-grid,
     .projects-grid {
         grid-template-columns: 1fr;
     }
+    
     .hero-buttons {
         justify-content: center;
     }
+    
     .container {
         padding: 0 1rem;
     }
+    
     .nav-container {
         padding: 0 1rem;
     }
@@ -871,16 +875,20 @@ section {
         width: 200px;
         height: 200px;
     }
+    
     .image-overlay {
         width: 220px;
         height: 220px;
     }
+    
     .name {
         font-size: 2rem;
     }
+    
     .section-title {
         font-size: 2rem;
     }
+    
     .btn {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
