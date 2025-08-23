@@ -124,8 +124,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
-    /* Ajustement de la marge supérieure */
-    padding-top: 3rem; 
+    padding-top: 0; /* Supprimer l'espace au-dessus du texte */
 }
 
 .hero::before {
@@ -148,12 +147,10 @@ body {
 }
 
 .hero-content {
-    /* Mise en page corrigée pour l'agencement de l'image et du texte */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* Augmentation de l'espace entre l'image et le texte */
-    gap: 6rem;
+    gap: 4rem; /* Réduire l'espace entre l'image et le texte */
     padding: 8rem 0;
 }
 
@@ -308,8 +305,7 @@ body {
 /* Sections communes */
 section {
     padding: 5rem 0;
-    /* Ajustement de la marge supérieure pour éviter le chevauchement */
-    margin-top: 0;
+    margin-top: 0; /* Assure qu'il n'y a pas de marge supérieure indésirable */
 }
 
 .section-header {
@@ -368,16 +364,16 @@ section {
 
 .experience-timeline {
     position: relative;
+    padding-left: 20px; /* Ajout d'un padding pour le contenu */
 }
 
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 0; /* Positionner la ligne à gauche du padding */
     top: 0;
-    /* Raccourcissement de la ligne */
-    height: calc(100% - 20px); 
-    width: 2px;
+    height: 100%; /* Laisser la ligne s'étendre sur toute la hauteur */
+    width: 1px; /* Rendre la ligne plus fine */
     background: var(--gradient-primary);
 }
 
@@ -387,6 +383,18 @@ section {
     gap: 1rem;
     margin-bottom: 2rem;
     position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px; /* Ajuster la position du cercle sur la ligne */
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .timeline-icon {
@@ -400,6 +408,8 @@ section {
     font-size: 1.2rem;
     box-shadow: var(--shadow-md);
     z-index: 2;
+    position: relative; /* Pour que le z-index fonctionne */
+    left: -30px; /* Décaler l'icône pour qu'elle soit sur la ligne */
 }
 
 .timeline-content {
@@ -414,6 +424,27 @@ section {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline-content ul li::before {
+    content: '•'; /* Utiliser une puce */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .timeline-date {
@@ -449,18 +480,26 @@ section {
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .skill-tag {
-    /* Style corrigé pour la lisibilité */
-    background: #e0f7ff;
-    color: #004d66;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    background: var(--primary-color); /* Utiliser la couleur primaire */
+    color: white;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.9rem;
     font-weight: 500;
     white-space: nowrap;
+    display: inline-flex; /* Pour centrer le texte */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Expertise Section */
@@ -506,16 +545,26 @@ section {
 .card-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .card-tech span {
-    background: var(--bg-secondary);
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    background: var(--primary-color); /* Utiliser la couleur primaire */
+    color: white;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-tech span:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -614,22 +663,6 @@ section {
     color: var(--text-primary);
 }
 
-/* Style des points de projet */
-.project-points {
-    list-style-type: none;
-    margin: 1.5rem 0;
-    padding: 0;
-}
-
-.project-points li {
-    background: #f0f8ff; /* Couleur de fond des tags */
-    color: #1e40af; /* Couleur du texte des tags */
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
 .project-content p {
     color: var(--text-secondary);
     line-height: 1.6;
@@ -639,16 +672,26 @@ section {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .project-tech span {
-    background: var(--bg-secondary);
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    background: var(--primary-color); /* Utiliser la couleur primaire */
+    color: white;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-tech span:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -817,7 +860,7 @@ section {
     }
     
     .hero-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
     }
@@ -874,3 +917,4 @@ section {
         font-size: 0.9rem;
     }
 }
+
