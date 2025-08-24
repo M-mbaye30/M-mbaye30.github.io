@@ -16,10 +16,12 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#stats" class="nav-link">Statistiques</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
                 <li><a href="#experience" class="nav-link">Expérience</a></li>
                 <li><a href="#expertise" class="nav-link">Expertise</a></li>
                 <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -61,6 +63,46 @@
             </div>
             <div class="scroll-indicator">
                 <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOUVELLE SECTION STATISTIQUES -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Projets NLP</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Années d'expérience</div>
+                </div>
+                <div class="stat-item" id="diploma-stat">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Diplômes</div>
+                    <div class="diploma-tooltip">
+                        <div class="tooltip-content">
+                            <div class="diploma-item">
+                                <span class="diploma-type">Master 2</span>
+                                <span class="diploma-count">2</span>
+                            </div>
+                            <div class="diploma-item">
+                                <span class="diploma-type">Licence</span>
+                                <span class="diploma-count">1</span>
+                            </div>
+                            <div class="diploma-item">
+                                <span class="diploma-type">Baccalauréat</span>
+                                <span class="diploma-count">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Disponible à partir de septembre 2025</div>
+                    <div class="stat-label"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -128,7 +170,7 @@
         </div>
     </section>
 
-    <!-- NOUVELLE SECTION EXPÉRIENCE AMÉLIORÉE -->
+    <!-- SECTION EXPÉRIENCE EXISTANTE -->
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
@@ -434,6 +476,65 @@
         </div>
     </section>
 
+    <!-- NOUVELLE SECTION CERTIFICATIONS -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Certifications</h2>
+                <p class="section-subtitle">Formations et certifications obtenues dans le domaine du NLP et de l'IA</p>
+            </div>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Master 2 en Traitement Automatique des Langues</h3>
+                        <p class="cert-institution">Université Marie et Louis Pasteur - Besançon, France</p>
+                        <p class="cert-date">2024 - 2025</p>
+                        <p class="cert-description">Spécialisé en TAL avec focus sur les architectures de Deep Learning pour le traitement des langues naturelles.</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Master 2 en Data Science - Spécialité NLP</h3>
+                        <p class="cert-institution">Université Mohammed V - Rabat, Maroc</p>
+                        <p class="cert-date">2023 - 2024</p>
+                        <p class="cert-description">Formation axée sur l'analyse de données textuelles et l'implémentation de modèles de Machine Learning pour le NLP.</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Licence en Informatique Linguistique</h3>
+                        <p class="cert-institution">Université Cadi Ayyad - Marrakech, Maroc</p>
+                        <p class="cert-date">2020 - 2023</p>
+                        <p class="cert-description">Formation fondamentale en linguistique computationnelle et en développement d'applications linguistiques.</p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Baccalauréat L'AR</h3>
+                        <p class="cert-institution">Mention Très Bien</p>
+                        <p class="cert-date">2020</p>
+                        <p class="cert-description">Obtention d'une bourse d'excellence pour poursuivre les études supérieures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -482,33 +583,3 @@
                         <i class="fab fa-github"></i>
                         <span>GitHub</span>
                     </a>
-                    <a href="mailto:mouhamedmbaye371@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="video-container">
-                <video id="modalVideo" controls>
-                    <source src="" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Mouhamed Mbaye. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
-</body>
-    </html>
