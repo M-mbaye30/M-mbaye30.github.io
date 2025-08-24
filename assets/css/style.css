@@ -124,6 +124,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 0; /* Supprimer l'espace au-dessus du texte */
 }
 
 .hero::before {
@@ -146,16 +147,18 @@ body {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 4rem; /* Réduire l'espace entre l'image et le texte */
+    padding: 8rem 0;
 }
 
 .hero-image {
     position: relative;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .profile-img {
@@ -192,6 +195,7 @@ body {
 
 .hero-text {
     color: white;
+    flex-grow: 1;
 }
 
 .greeting {
@@ -225,7 +229,7 @@ body {
     line-height: 1.7;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .hero-status {
@@ -293,42 +297,15 @@ body {
     transform: translateY(-2px);
 }
 
+/* Suppression de la flèche de défilement */
 .scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-}
-
-.scroll-arrow {
-    width: 2px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.6);
-    position: relative;
-}
-
-.scroll-arrow::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -3px;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid rgba(255, 255, 255, 0.6);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-    transform: rotate(45deg);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
+    display: none;
 }
 
 /* Sections communes */
 section {
     padding: 5rem 0;
+    margin-top: 0; /* Assure qu'il n'y a pas de marge supérieure indésirable */
 }
 
 .section-header {
@@ -387,15 +364,25 @@ section {
 
 .experience-timeline {
     position: relative;
+    padding: 2rem; /* Augmenter le padding pour mettre en valeur */
+    background: white; /* Ajouter un fond blanc */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: var(--shadow-lg); /* Ombre plus prononcée */
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.experience-timeline:hover {
+    transform: translateY(-5px); /* Effet de survol */
 }
 
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 20px; /* Positionner la ligne à gauche du padding */
     top: 0;
-    bottom: 0;
-    width: 2px;
+    height: 100%; /* Laisser la ligne s'étendre sur toute la hauteur */
+    width: 1px; /* Rendre la ligne plus fine */
     background: var(--gradient-primary);
 }
 
@@ -405,6 +392,18 @@ section {
     gap: 1rem;
     margin-bottom: 2rem;
     position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 15px; /* Ajuster la position du cercle sur la ligne */
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .timeline-icon {
@@ -418,6 +417,8 @@ section {
     font-size: 1.2rem;
     box-shadow: var(--shadow-md);
     z-index: 2;
+    position: relative; /* Pour que le z-index fonctionne */
+    left: -30px; /* Décaler l'icône pour qu'elle soit sur la ligne */
 }
 
 .timeline-content {
@@ -432,6 +433,27 @@ section {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.timeline-content ul li::before {
+    content: '•'; /* Utiliser une puce */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .timeline-date {
@@ -467,22 +489,33 @@ section {
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .skill-tag {
-    background: var(--gradient-primary);
+    background: var(--primary-color); /* Utiliser la couleur primaire */
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.9rem;
     font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex; /* Pour centrer le texte */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Expertise Section */
 .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex; /* Utiliser flexbox pour une disposition horizontale */
+    flex-wrap: wrap; /* Permettre le retour à la ligne */
+    justify-content: center; /* Centrer les éléments */
     gap: 2rem;
 }
 
@@ -493,6 +526,8 @@ section {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    flex: 1 1 300px; /* Permettre aux cartes de grandir/rétrécir et définir une largeur de base */
+    max-width: 350px; /* Limiter la largeur maximale pour éviter des cartes trop larges */
 }
 
 .expertise-card:hover {
@@ -522,16 +557,26 @@ section {
 .card-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .card-tech span {
-    background: var(--bg-secondary);
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    background: var(--primary-color); /* Utiliser la couleur primaire */
+    color: white;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-tech span:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -639,16 +684,26 @@ section {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
 }
 
 .project-tech span {
-    background: var(--bg-secondary);
-    color: var(--primary-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    background: var(--primary-color); /* Utiliser la couleur primaire */
+    color: white;
+    padding: 0.6rem 1.2rem; /* Ajuster le padding */
+    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-tech span:hover {
+    background: var(--secondary-color); /* Changement de couleur au survol */
+    transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -832,7 +887,15 @@ section {
         gap: 2rem;
     }
     
-    .expertise-grid,
+    .expertise-grid {
+        flex-direction: column; /* Revenir à la colonne sur mobile */
+        align-items: center;
+    }
+    
+    .expertise-card {
+        max-width: 100%; /* Occuper toute la largeur sur mobile */
+    }
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }
