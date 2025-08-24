@@ -22,6 +22,7 @@
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-stats: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 body {
@@ -124,7 +125,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
-    padding-top: 0; /* Supprimer l'espace au-dessus du texte */
+    padding-top: 0;
 }
 
 .hero::before {
@@ -150,7 +151,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem; /* Réduire l'espace entre l'image et le texte */
+    gap: 4rem;
     padding: 8rem 0;
 }
 
@@ -297,6 +298,130 @@ body {
     transform: translateY(-2px);
 }
 
+/* NOUVELLE SECTION STATISTIQUES */
+.stats-section {
+    background: var(--gradient-stats);
+    padding: 4rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff05" points="0,0 1000,1000 0,1000"/></svg>');
+    background-size: cover;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ffffff, #f0f9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Tooltip pour les diplômes */
+#diploma-stat {
+    position: relative;
+    cursor: pointer;
+}
+
+.diploma-tooltip {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.diploma-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+#diploma-stat:hover .diploma-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.diploma-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.diploma-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.diploma-type {
+    font-weight: 500;
+}
+
+.diploma-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 /* Suppression de la flèche de défilement */
 .scroll-indicator {
     display: none;
@@ -305,7 +430,7 @@ body {
 /* Sections communes */
 section {
     padding: 5rem 0;
-    margin-top: 0; /* Assure qu'il n'y a pas de marge supérieure indésirable */
+    margin-top: 0;
 }
 
 .section-header {
@@ -364,25 +489,25 @@ section {
 
 .experience-timeline {
     position: relative;
-    padding: 2rem; /* Augmenter le padding pour mettre en valeur */
-    background: white; /* Ajouter un fond blanc */
-    border-radius: 20px; /* Coins arrondis */
-    box-shadow: var(--shadow-lg); /* Ombre plus prononcée */
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
     margin-bottom: 2rem;
     transition: all 0.3s ease;
 }
 
 .experience-timeline:hover {
-    transform: translateY(-5px); /* Effet de survol */
+    transform: translateY(-5px);
 }
 
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 20px; /* Positionner la ligne à gauche du padding */
+    left: 20px;
     top: 0;
-    height: 100%; /* Laisser la ligne s'étendre sur toute la hauteur */
-    width: 1px; /* Rendre la ligne plus fine */
+    height: 100%;
+    width: 1px;
     background: var(--gradient-primary);
 }
 
@@ -397,7 +522,7 @@ section {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 15px; /* Ajuster la position du cercle sur la ligne */
+    left: 15px;
     top: 0;
     width: 10px;
     height: 10px;
@@ -417,8 +542,8 @@ section {
     font-size: 1.2rem;
     box-shadow: var(--shadow-md);
     z-index: 2;
-    position: relative; /* Pour que le z-index fonctionne */
-    left: -30px; /* Décaler l'icône pour qu'elle soit sur la ligne */
+    position: relative;
+    left: -30px;
 }
 
 .timeline-content {
@@ -449,7 +574,7 @@ section {
 }
 
 .timeline-content ul li::before {
-    content: '•'; /* Utiliser une puce */
+    content: '•';
     color: var(--primary-color);
     position: absolute;
     left: 0;
@@ -489,33 +614,33 @@ section {
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
+    gap: 0.75rem;
 }
 
 .skill-tag {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
+    background: var(--primary-color);
     color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
     font-size: 0.9rem;
     font-weight: 500;
     white-space: nowrap;
-    display: inline-flex; /* Pour centrer le texte */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .skill-tag:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
 /* Expertise Section */
 .expertise-grid {
-    display: flex; /* Utiliser flexbox pour une disposition horizontale */
-    flex-wrap: wrap; /* Permettre le retour à la ligne */
-    justify-content: center; /* Centrer les éléments */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -526,8 +651,8 @@ section {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
-    flex: 1 1 300px; /* Permettre aux cartes de grandir/rétrécir et définir une largeur de base */
-    max-width: 350px; /* Limiter la largeur maximale pour éviter des cartes trop larges */
+    flex: 1 1 300px;
+    max-width: 350px;
 }
 
 .expertise-card:hover {
@@ -557,14 +682,14 @@ section {
 .card-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
+    gap: 0.75rem;
 }
 
 .card-tech span {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
+    background: var(--primary-color);
     color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
@@ -575,7 +700,7 @@ section {
 }
 
 .card-tech span:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -684,14 +809,14 @@ section {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem; /* Augmenter l'espacement entre les tags */
+    gap: 0.75rem;
 }
 
 .project-tech span {
-    background: var(--primary-color); /* Utiliser la couleur primaire */
+    background: var(--primary-color);
     color: white;
-    padding: 0.6rem 1.2rem; /* Ajuster le padding */
-    border-radius: 9999px; /* Rendre les coins très arrondis (chip style) */
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
@@ -702,8 +827,75 @@ section {
 }
 
 .project-tech span:hover {
-    background: var(--secondary-color); /* Changement de couleur au survol */
+    background: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+/* NOUVELLE SECTION CERTIFICATIONS */
+.certifications {
+    background: var(--bg-primary);
+    padding: 5rem 0;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.cert-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.cert-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.cert-institution {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.cert-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.cert-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
@@ -849,6 +1041,20 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 968px) {
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -865,6 +1071,7 @@ section {
         transition: 0.3s;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        gap: 1rem;
     }
     
     .nav-menu.active {
@@ -875,10 +1082,16 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        flex-direction: column;
     }
     
     .name {
         font-size: 2.5rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .about-content,
@@ -888,16 +1101,26 @@ section {
     }
     
     .expertise-grid {
-        flex-direction: column; /* Revenir à la colonne sur mobile */
+        flex-direction: column;
         align-items: center;
     }
     
     .expertise-card {
-        max-width: 100%; /* Occuper toute la largeur sur mobile */
+        max-width: 100%;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-card {
+        flex-direction: column;
+        text-align: center;
+        min-width: auto;
     }
     
     .hero-buttons {
@@ -910,6 +1133,13 @@ section {
     
     .nav-container {
         padding: 0 1rem;
+    }
+    
+    .diploma-tooltip {
+        left: 10px;
+        right: 10px;
+        transform: none;
+        width: auto;
     }
 }
 
@@ -936,5 +1166,22 @@ section {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
     }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+    
+    .certification-card {
+        padding: 1.5rem;
+    }
+    
+    .cert-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
 }
-
