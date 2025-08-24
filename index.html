@@ -16,12 +16,11 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Accueil</a></li>
-                <li><a href="#stats" class="nav-link">Statistiques</a></li>
                 <li><a href="#about" class="nav-link">À propos</a></li>
                 <li><a href="#experience" class="nav-link">Expérience</a></li>
                 <li><a href="#expertise" class="nav-link">Expertise</a></li>
                 <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#diplomes-certifications" class="nav-link">Diplômes & Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -59,50 +58,48 @@
                             Télécharger CV
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- NOUVELLE SECTION STATISTIQUES -->
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Projets NLP</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-label">Années d'expérience</div>
-                </div>
-                <div class="stat-item" id="diploma-stat">
-                    <div class="stat-number">4+</div>
-                    <div class="stat-label">Diplômes</div>
-                    <div class="diploma-tooltip">
-                        <div class="tooltip-content">
-                            <div class="diploma-item">
-                                <span class="diploma-type">Master 2</span>
-                                <span class="diploma-count">2</span>
+                    <!-- STATISTIQUES INTÉGRÉES DANS LE HÉROS -->
+                    <div class="hero-stats">
+                        <div class="hero-stats-container">
+                            <div class="hero-stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Projets NLP</div>
                             </div>
-                            <div class="diploma-item">
-                                <span class="diploma-type">Licence</span>
-                                <span class="diploma-count">1</span>
+                            <div class="hero-stat-item">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label">Années d'expérience</div>
                             </div>
-                            <div class="diploma-item">
-                                <span class="diploma-type">Baccalauréat</span>
-                                <span class="diploma-count">1</span>
+                            <div class="hero-stat-item" id="diploma-stat">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Diplômes</div>
+                                <div class="diploma-tooltip">
+                                    <div class="tooltip-content">
+                                        <div class="diploma-item">
+                                            <span class="diploma-type">Master 2 TAL</span>
+                                            <span class="diploma-count">1</span>
+                                        </div>
+                                        <div class="diploma-item">
+                                            <span class="diploma-type">Master 2 NLP</span>
+                                            <span class="diploma-count">1</span>
+                                        </div>
+                                        <div class="diploma-item">
+                                            <span class="diploma-type">Licence</span>
+                                            <span class="diploma-count">1</span>
+                                        </div>
+                                        <div class="diploma-item">
+                                            <span class="diploma-type">Baccalauréat</span>
+                                            <span class="diploma-count">1</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">Disponible à partir de septembre 2025</div>
-                    <div class="stat-label"></div>
-                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
             </div>
         </div>
     </section>
@@ -170,7 +167,6 @@
         </div>
     </section>
 
-    <!-- SECTION EXPÉRIENCE EXISTANTE -->
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
@@ -253,7 +249,6 @@
                     </div>
                 </div>
 
-                <!-- Éléments flottants décoratifs -->
                 <div class="floating-elements">
                     <div class="floating-element"></div>
                     <div class="floating-element"></div>
@@ -476,59 +471,83 @@
         </div>
     </section>
 
-    <!-- NOUVELLE SECTION CERTIFICATIONS -->
-    <section id="certifications" class="certifications">
+    <!-- SECTION DIPLÔMES ET CERTIFICATIONS RESTRUCTURÉE -->
+    <section id="diplomes-certifications" class="diplomes-certifications">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Mes Certifications</h2>
-                <p class="section-subtitle">Formations et certifications obtenues dans le domaine du NLP et de l'IA</p>
+                <h2 class="section-title">Diplômes et Certifications</h2>
+                <p class="section-subtitle">Mon parcours académique et formations continues</p>
             </div>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
+            
+            <!-- SOUS-SECTION DIPLÔMES -->
+            <div class="diplomes-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Diplômes
+                </h3>
+                <div class="diplomes-grid">
+                    <div class="diplome-card">
+                        <div class="diplome-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="diplome-content">
+                            <h4>Master 2 en Traitement Automatique des Langues</h4>
+                            <p class="diplome-institution">Université Marie et Louis Pasteur - Besançon, France</p>
+                            <p class="diplome-date">2024 - 2025</p>
+                            <p class="diplome-description">Spécialisé en TAL avec focus sur les architectures de Deep Learning pour le traitement des langues naturelles.</p>
+                        </div>
                     </div>
-                    <div class="cert-content">
-                        <h3>Master 2 en Traitement Automatique des Langues</h3>
-                        <p class="cert-institution">Université Marie et Louis Pasteur - Besançon, France</p>
-                        <p class="cert-date">2024 - 2025</p>
-                        <p class="cert-description">Spécialisé en TAL avec focus sur les architectures de Deep Learning pour le traitement des langues naturelles.</p>
+
+                    <div class="diplome-card">
+                        <div class="diplome-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="diplome-content">
+                            <h4>Master 2 en Data Science - Spécialité NLP</h4>
+                            <p class="diplome-institution">Université Mohammed V - Rabat, Maroc</p>
+                            <p class="diplome-date">2023 - 2024</p>
+                            <p class="diplome-description">Formation axée sur l'analyse de données textuelles et l'implémentation de modèles de Machine Learning pour le NLP.</p>
+                        </div>
+                    </div>
+
+                    <div class="diplome-card">
+                        <div class="diplome-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="diplome-content">
+                            <h4>Licence en Informatique Linguistique</h4>
+                            <p class="diplome-institution">Université Cadi Ayyad - Marrakech, Maroc</p>
+                            <p class="diplome-date">2020 - 2023</p>
+                            <p class="diplome-description">Formation fondamentale en linguistique computationnelle et en développement d'applications linguistiques.</p>
+                        </div>
+                    </div>
+
+                    <div class="diplome-card">
+                        <div class="diplome-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="diplome-content">
+                            <h4>Baccalauréat L'AR</h4>
+                            <p class="diplome-institution">Mention Très Bien</p>
+                            <p class="diplome-date">2020</p>
+                            <p class="diplome-description">Obtention d'une bourse d'excellence pour poursuivre les études supérieures.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Master 2 en Data Science - Spécialité NLP</h3>
-                        <p class="cert-institution">Université Mohammed V - Rabat, Maroc</p>
-                        <p class="cert-date">2023 - 2024</p>
-                        <p class="cert-description">Formation axée sur l'analyse de données textuelles et l'implémentation de modèles de Machine Learning pour le NLP.</p>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Licence en Informatique Linguistique</h3>
-                        <p class="cert-institution">Université Cadi Ayyad - Marrakech, Maroc</p>
-                        <p class="cert-date">2020 - 2023</p>
-                        <p class="cert-description">Formation fondamentale en linguistique computationnelle et en développement d'applications linguistiques.</p>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Baccalauréat L'AR</h3>
-                        <p class="cert-institution">Mention Très Bien</p>
-                        <p class="cert-date">2020</p>
-                        <p class="cert-description">Obtention d'une bourse d'excellence pour poursuivre les études supérieures.</p>
+            <!-- SOUS-SECTION CERTIFICATIONS -->
+            <div class="certifications-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-certificate"></i>
+                    Certifications
+                </h3>
+                <div class="certifications-grid">
+                    <!-- Placeholder pour futures certifications -->
+                    <div class="certification-placeholder">
+                        <i class="fas fa-plus"></i>
+                        <p>Certifications à venir...</p>
+                        <small>En cours d'obtention de certifications professionnelles en NLP et IA</small>
                     </div>
                 </div>
             </div>
@@ -583,3 +602,23 @@
                         <i class="fab fa-github"></i>
                         <span>GitHub</span>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les vidéos -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-container">
+                <video id="modalVideo" controls>
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
